@@ -22,28 +22,27 @@ After generating the topic distributions, the results are reduced to a 2D space 
 - `transformers`
 - `umap-learn`
 
-## Setup and Installation
-
-Clone the repository:
-```bash
-git clone [Your Repo URL]
-
-Install the required packages:
-bash
-Copy code
-pip install -r requirements.txt
-(Note: You might want to create a requirements.txt file listing the dependencies.)
-
-Usage
-Load your dataset and pre-process it.
-Tokenise the recipes for topic modeling using BERT Tokenizer.
-Apply LDA and BERT-based topic modeling.
-Visualise the topics using PCA, t-SNE, and UMAP.
-Cluster the visualised topics using KMeans.
-Evaluate clustering using the silhouette score.
+## Usage
+ - Load your dataset and pre-process it.
+ - Tokenise the recipes for topic modeling using BERT Tokenizer.
+ - Apply LDA and BERT-based topic modeling.
+ - Visualise the topics using PCA, t-SNE, and UMAP.
+ - Cluster the visualised topics using KMeans.
+ - Evaluate clustering using the silhouette score.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 MIT
+
+## Setup and Installation
+
+Clone the repository:
+```bash
+git clone [Your Repo URL]
+nstall the required packages:
+bash
+Copy code:
+pip install -r requirements.txt
+(Note: You might want to create a requirements.txt file listing the dependencies.)
