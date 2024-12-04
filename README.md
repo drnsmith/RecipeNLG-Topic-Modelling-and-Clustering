@@ -1,11 +1,11 @@
-# **RecipeNLG Topic Modelling and Clustering**
+### NLP-Driven Recipe Clustering: Topic Modelling with BERT and LDA
 
-## **Project Overview**
+#### **Overview**
 This project conducts an advanced analysis of the **RecipeNLG** dataset by employing a combination of **Latent Dirichlet Allocation (LDA)** and **BERT embeddings** for topic modelling. Through dimensionality reduction techniques and **K-Means clustering**, the aim is to discover and visualize distinct culinary topics, leveraging modern **Natural Language Processing (NLP)** methods to delve deep into the world of recipes.
 
 ---
 
-## **Motivation**
+#### **Motivation**
 Understanding the thematic structure of recipes can provide valuable insights into culinary trends, ingredient pairings, and cultural food practices. This project seeks to:
 
 1. **Uncover Hidden Themes**: Identify underlying topics within a large corpus of recipes.
