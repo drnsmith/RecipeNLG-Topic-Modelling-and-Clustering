@@ -1,63 +1,70 @@
-### NLP-Driven Recipe Clustering: Topic Modelling with BERT and LDA
+# NLP-Driven Recipe Clustering: Topic Modelling with BERT and LDA
 
-#### **Overview**
-This project conducts an advanced analysis of the **RecipeNLG** dataset by employing a combination of **Latent Dirichlet Allocation (LDA)** and **BERT embeddings** for topic modelling. Through dimensionality reduction techniques and **K-Means clustering**, the aim is to discover and visualize distinct culinary topics, leveraging modern **Natural Language Processing (NLP)** methods to delve deep into the world of recipes.
+## **Overview**
+This project explores the **RecipeNLG** dataset using a combination of **Latent Dirichlet Allocation (LDA)** and **BERT embeddings** for advanced topic modelling. By employing dimensionality reduction techniques and **K-Means clustering**, the goal is to uncover and visualise distinct culinary themes, leveraging state-of-the-art **Natural Language Processing (NLP)** methods to analyse recipes.
 
 ---
 
-#### **Motivation**
-Understanding the thematic structure of recipes can provide valuable insights into culinary trends, ingredient pairings, and cultural food practices. This project seeks to:
+## **Motivation**
+Understanding the thematic structure of recipes provides valuable insights into culinary trends, ingredient pairings, and cultural food practices. The primary objectives of this project are to:
 
-1. **Uncover Hidden Themes**: Identify underlying topics within a large corpus of recipes.
-2. **Enhance Recipe Recommendations**: Improve the relevance of recipe suggestions based on thematic clustering.
-3. **Contribute to NLP Research**: Explore the effectiveness of combining traditional and transformer-based models in topic modeling.
+1. **Identify Hidden Themes**: Detect underlying topics within a large corpus of recipes.
+2. **Improve Recipe Recommendations**: Enhance the relevance of recipe suggestions using thematic clustering.
+3. **Advance NLP Research**: Evaluate the effectiveness of combining traditional and transformer-based models for topic modelling.
 
 ---
 
 ## **Dataset Description**
-- **Source**: The dataset is sourced from the [RecipeNLG](https://recipenlg.cs.put.poznan.pl) project, which offers a large collection of cooking recipes for semi-structured text generation.
+
+- **Source**: The dataset originates from the [RecipeNLG](https://recipenlg.cs.put.poznan.pl) project, which contains a vast collection of cooking recipes for semi-structured text generation.
 - **Structure**:
   - Each recipe includes:
-    - **Title**: The name of the recipe.
-    - **Ingredients**: A list of components required.
+    - **Title**: The recipe name.
+    - **Ingredients**: A list of required components.
     - **Instructions**: Step-by-step preparation methods.
-    - **Metadata**: Additional information such as cuisine type and cooking time.
+    - **Metadata**: Additional details such as cuisine type and cooking time.
 - **Pre-processing**:
-  - **Text Cleaning**: Removal of special characters, numbers, and extraneous whitespace.
-  - **Tokenization**: Splitting text into meaningful tokens.
-  - **Lemmatization**: Reducing words to their base or root form.
+  - **Text Cleaning**: Removing special characters, numbers, and extraneous whitespace.
+  - **Tokenisation**: Splitting text into meaningful tokens.
+  - **Lemmatisation**: Reducing words to their base or root form.
 
 ---
 
 ## **Methodologies**
 
-### **1. Topic Modeling Approaches**
-- **Latent Dirichlet Allocation (LDA)**:
-  - A generative probabilistic model that identifies topics by clustering words that frequently co-occur across documents.
-- **BERT Embeddings**:
-  - Utilizes the **Bidirectional Encoder Representations from Transformers (BERT)** model to generate contextual embeddings for recipes, capturing semantic nuances.
+### **1. Topic Modelling Techniques**
 
-### **2. Dimensionality Reduction Techniques**
+- **Latent Dirichlet Allocation (LDA)**:
+  - A probabilistic model that identifies topics by clustering words that frequently co-occur across documents.
+- **BERT Embeddings**:
+  - Uses the **Bidirectional Encoder Representations from Transformers (BERT)** model to generate contextual embeddings, capturing semantic nuances in recipes.
+
+### **2. Dimensionality Reduction Methods**
+
 - **Principal Component Analysis (PCA)**:
-  - Reduces the dimensionality of data while preserving as much variance as possible.
-- **t-Distributed Stochastic Neighbor Embedding (t-SNE)**:
-  - Converts high-dimensional data into two or three dimensions for visualization, focusing on local data structure.
+  - Reduces data dimensionality while retaining maximum variance.
+- **t-Distributed Stochastic Neighbour Embedding (t-SNE)**:
+  - Transforms high-dimensional data into two or three dimensions for visualisation, focusing on local data structure.
 - **Uniform Manifold Approximation and Projection (UMAP)**:
-  - Preserves both local and global data structure in the reduced dimensional space, facilitating effective clustering.
+  - Balances the preservation of local and global data structure in reduced dimensionality, aiding clustering.
 
 ### **3. Clustering Algorithm**
+
 - **K-Means Clustering**:
-  - Partitions data into **K** clusters by minimizing the variance within each cluster.
+  - Divides data into **K** clusters by minimising intra-cluster variance.
 
 ### **4. Evaluation Metric**
+
 - **Silhouette Score**:
-  - Measures how similar an object is to its own cluster compared to other clusters, indicating the effectiveness of clustering.
+  - Assesses how similar an object is to its cluster compared to other clusters, providing an effectiveness measure for clustering.
 
 ---
-## Dependencies
+
+## **Dependencies**
 
 Ensure you have the following packages installed:
-- `sklearn`
+
+- `scikit-learn`
 - `numpy`
 - `pandas`
 - `gensim`
@@ -65,7 +72,9 @@ Ensure you have the following packages installed:
 - `transformers`
 - `umap-learn`
 
-## Setup and Installation
+---
+
+## **Setup and Installation**
 
 1. **Clone the repository**:
     ```bash
@@ -73,61 +82,59 @@ Ensure you have the following packages installed:
     ```
 
 2. **Install the required packages**:
-    Create a `requirements.txt` file or directly install the packages using:
+    Create a `requirements.txt` file or directly install dependencies using:
     ```bash
     pip install -r requirements.txt
     ```
 
-## Usage
+---
 
-To perform topic modelling and clustering with this project, follow these steps:
+## **Usage**
 
-1. **Load and Preprocess the Dataset**: Prepare the RecipeNLG dataset for analysis by loading and preprocessing the data.
-2. **Tokenize Recipes**: Tokenize the recipes for topic modeling using the BERT tokenizer.
+To perform topic modelling and clustering, follow these steps:
+
+1. **Load and Pre-process the Dataset**: Prepare the RecipeNLG dataset by cleaning and processing the data.
+2. **Tokenise Recipes**: Tokenise the recipes for topic modelling using the BERT tokenizer.
 3. **Apply Topic Modelling**:
-   - Generate topic distributions using LDA and BERT-based topic modeling.
-4. **Visualise Topics**: Use PCA, t-SNE, and UMAP to reduce dimensionality for easier visualization.
-5. **Cluster Topics**: Apply KMeans clustering to the visualized data.
+   - Generate topic distributions using LDA and BERT-based modelling.
+4. **Visualise Topics**: Use PCA, t-SNE, and UMAP for dimensionality reduction and visualisation.
+5. **Cluster Topics**: Apply K-Means clustering to the visualised data.
 6. **Evaluate Clustering Performance**: Assess clustering using the silhouette score.
 
-### Contributing
-Contributions are welcome! If you have ideas or improvements to share, please follow these steps:
+---
 
-1. **Fork the Repository:**
-Create your own copy of the repository by clicking the "Fork" button at the top right of this page.
+### **Contributing**
 
-2. **Create a Feature Branch:**
-Work on your changes in a dedicated branch.
+Contributions are welcome! To contribute, please follow these steps:
 
-```bash
-git checkout -b feature/YourFeatureName
-```
-3. **Commit Your Changes:**
-Write clear and concise commit messages explaining what you’ve done.
+1. **Fork the Repository**: Create a personal copy of the repository by clicking the "Fork" button on GitHub.
+2. **Create a Feature Branch**: Work on changes in a dedicated branch.
+    ```bash
+    git checkout -b feature/YourFeatureName
+    ```
+3. **Commit Your Changes**: Write clear and concise commit messages detailing your updates.
+    ```bash
+    git commit -m "Add YourFeatureName"
+    ```
+4. **Push Your Changes**: Push the feature branch to your forked repository.
+    ```bash
+    git push origin feature/YourFeatureName
+    ```
+5. **Open a Pull Request**: Submit changes to the main repository by opening a pull request (PR). Provide a detailed description of your updates.
 
-```bash
-git commit -m "Add YourFeatureName"
-```
-4. **Push Your Changes:**
-Push your feature branch to your forked repository.
-```bash
-git push origin feature/YourFeatureName
-```
-5. **Open a Pull Request:**
-Submit your changes to the main repository by opening a pull request (PR). Ensure your PR description explains your changes clearly.
+---
 
-6. **Review and Feedback:**
-I will review your PR and may suggest improvements before merging it into the main branch.
+### **License**
 
-Thank you for your interest in contributing!
+This project is licensed under the MIT License. For more details, see the `LICENSE` file.
 
-### License
-Distributed under the MIT License. See `LICENSE` for more information.
+---
 
-### Acknowledgement
-RecipeNLG Dataset: [https://recipenlg.cs.put.poznan.pl/dataset](https://recipenlg.cs.put.poznan.pl/dataset)
+### **Acknowledgements**
 
-**Note**: This README provides a high-level overview. Detailed code can be found in the GitHub repository.
+Special thanks to the RecipeNLG dataset creators. You can access the dataset [here](https://recipenlg.cs.put.poznan.pl/dataset).
+
+
 
 
 
